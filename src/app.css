@@ -57,7 +57,7 @@ p {
 a {
   text-decoration: none;
 }
-.degree.active {
+.active {
   color: midnightblue;
   cursor: default;
 }
