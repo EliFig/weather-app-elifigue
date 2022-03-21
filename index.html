@@ -25,7 +25,7 @@
       <div>
         <form>
           <input
-            type="text"
+            type="search"
             id="city-input"
             placeholder="Search for a city"
             autocomplete="off"
@@ -42,8 +42,21 @@
       <h2 id="description">Mostly sunny</h2>
       <section>
         <div class="row">
-          <div class="col-4 icons">🌤</div>
-          <div class="col-4 degree" id="temperature">2°C</div>
+          <div class="col-4 icons">
+            <img
+              src="http://openweathermap.org/img/wn/01d@2x.png"
+              alt="Clear"
+              class="float-left"
+              id="icon"
+            />
+          </div>
+          <div class="col-4 degree">
+            <span id="temperature">2</span
+            ><span class="metric">
+              <a href="#" id="celcius" class="active">°C|</a
+              ><a href="#" id="fahrenheit">°F</a></span
+            >
+          </div>
           <div class="col-4 details">
             <span id="humidity">Humidity: 94%</span>
             <br />

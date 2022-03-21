@@ -38,23 +38,28 @@ p {
 .col-12 {
   text-align: center;
   font-size: 32px;
-  margin-top: -25px;
+  margin-top: -8px;
 }
 .icons {
-  font-size: 120px;
+  margin-top: 22px;
 }
 .degree {
   font-size: 100px;
   color: midnightblue;
 }
-.units {
-  font-size: 21px;
+.metric {
+  font-size: 23px;
   position: relative;
-  top: -220px;
-  left: 111px;
+  top: -53px;
+  left: 3px;
 }
+
 a {
   text-decoration: none;
+}
+.degree.active {
+  color: midnightblue;
+  cursor: default;
 }
 .details {
   padding-top: 40px;

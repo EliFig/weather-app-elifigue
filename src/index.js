@@ -21,10 +21,11 @@ let day = days[now.getUTCDay()];
 currentdate.innerHTML = `${day} ${hour}:${minutes}`;
 
 function displayWeather(response) {
+  celciusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}°C`;
+    celciusTemperature
+  )}`;
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity} %`;
@@ -33,6 +34,11 @@ function displayWeather(response) {
   )} km/h`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(event) {
@@ -43,6 +49,32 @@ function searchCity(event) {
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayWeather);
 }
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celcius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  celcius.classList.add("active");
+  fahrenheit.classList.remove("active");
+
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheitTemperature);
+
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", displayCelciusTemperature);
 
 let form = document.querySelector("form");
 form.addEventListener("submit", searchCity);
