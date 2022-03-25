@@ -1,6 +1,13 @@
 body {
   background-image: url("world.jpg");
 }
+input {
+  margin-left: 172px;
+  padding-left: 90px;
+  padding-right: 90px;
+  margin-top: -1px;
+  margin-left: 166px;
+}
 h1,
 h2 {
   text-align: center;
@@ -11,13 +18,11 @@ h1 {
   margin-top: 24px;
   font-size: 65px;
   font-weight: 600;
-  color: midnightblue;
+  color: #333037;
 }
 h2 {
   font-weight: 400;
-}
-section {
-  margin: 80px 30px;
+  color: rgb(84, 7, 156);
 }
 p {
   text-align: center;
@@ -25,27 +30,41 @@ p {
 }
 .container {
   margin: 10px auto;
-  width: 800px;
-  max-width: 900px;
+  max-width: 800px;
   border: 0px;
-  border-radius: 0px;
+  border-radius: 80px;
   padding: 50px 50px;
-  background-color: #e7eaf6;
+  background: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+}
+.form-control {
+  display: block;
+}
+.searchButton {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-top-width: 2px;
+  border-top-style: solid;
+  margin-top: -1px;
+  margin-left: -13px;
+}
+.center {
+  margin: 80px 30px;
 }
 .col-4 {
   text-align: center;
 }
 .col-12 {
   text-align: center;
-  font-size: 32px;
+  font-size: 38px;
   margin-top: -8px;
+  color: rgb(84, 7, 156);
 }
 .icons {
-  margin-top: 22px;
+  margin-top: 37px;
 }
 .degree {
-  font-size: 100px;
-  color: midnightblue;
+  font-size: 110px;
+  color: #333037;
 }
 .metric {
   font-size: 23px;
@@ -58,11 +77,12 @@ a {
   text-decoration: none;
 }
 .active {
-  color: midnightblue;
+  color: #333037;
   cursor: default;
 }
 .details {
   padding-top: 40px;
+  color: rgb(84, 7, 156);
 }
 .emoji {
   font-size: 60px;
@@ -75,6 +95,17 @@ a {
   margin-top: 5px;
   font-weight: 600;
 }
+.card {
+  border: 0.5px solid rgba(0, 0, 0, 0.125);
+  border-radius: 19px;
+}
+.card-body {
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(84, 7, 156);
+  text-align: center;
+}
+
 .source {
   font-size: 14px;
 }
