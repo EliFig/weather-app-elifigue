@@ -1,12 +1,16 @@
 body {
-  background-image: url("world.jpg");
+  background-image: url("outworld.jpg");
 }
 input {
-  margin-left: 172px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   padding-left: 90px;
   padding-right: 90px;
   margin-top: -1px;
-  margin-left: 166px;
+  margin-left: 99px;
+  width: 100%;
+  text-align: center;
+  border: transparent;
 }
 h1,
 h2 {
@@ -18,11 +22,11 @@ h1 {
   margin-top: 24px;
   font-size: 65px;
   font-weight: 600;
-  color: #333037;
+  color: #020213;
 }
 h2 {
   font-weight: 400;
-  color: rgb(84, 7, 156);
+  color: rgb(22, 17, 179);
 }
 p {
   text-align: center;
@@ -34,18 +38,30 @@ p {
   border: 0px;
   border-radius: 80px;
   padding: 50px 50px;
-  background: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+  background: rgba(250, 255, 253, 0.7);
 }
 .form-control {
   display: block;
 }
 .searchButton {
+  margin-top: -1px;
+  padding-left: 8px;
+  padding-right: 8px;
   padding-top: 2px;
   padding-bottom: 2px;
-  border-top-width: 2px;
-  border-top-style: solid;
-  margin-top: -1px;
+  border: 0.5px solid;
   margin-left: -13px;
+  margin-right: 99px;
+  width: 81%;
+  background-color: #718caa;
+  color: #fff;
+  border-color: #c8d5e3;
+}
+.searchButton:hover {
+  background-color: #cfdef0;
+  color: #020213;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .center {
   margin: 80px 30px;
@@ -56,15 +72,15 @@ p {
 .col-12 {
   text-align: center;
   font-size: 38px;
-  margin-top: -8px;
-  color: rgb(84, 7, 156);
+  font-weight: 500;
+  color: rgb(22, 17, 179);
 }
 .icons {
   margin-top: 37px;
 }
 .degree {
   font-size: 110px;
-  color: #333037;
+  color: #020213;
 }
 .metric {
   font-size: 23px;
@@ -77,12 +93,14 @@ a {
   text-decoration: none;
 }
 .active {
-  color: #333037;
+  color: #020213;
   cursor: default;
 }
 .details {
-  padding-top: 40px;
-  color: rgb(84, 7, 156);
+  padding-top: 50px;
+  color: #020213;
+  font-weight: 530;
+  font-size: 17px;
 }
 .emoji {
   font-size: 60px;
@@ -97,13 +115,14 @@ a {
 }
 .card {
   border: 0.5px solid rgba(0, 0, 0, 0.125);
-  border-radius: 19px;
+  border-radius: 15px;
 }
 .card-body {
   font-size: 17px;
   font-weight: 500;
-  color: rgb(84, 7, 156);
+  color: rgb(22, 17, 179);
   text-align: center;
+  font-weight: 650;
 }
 
 .source {
