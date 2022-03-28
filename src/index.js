@@ -110,6 +110,7 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   searchCity(cityInputElement.value);
+  displayCelciusTemperature();
 }
 
 function displayFahrenheitTemperature(event) {
