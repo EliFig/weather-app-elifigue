@@ -96,7 +96,6 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-
   getForecast(response.data.coord);
 }
 
@@ -111,6 +110,7 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   searchCity(cityInputElement.value);
+  displayCelciusTemperature();
 }
 
 function displayFahrenheitTemperature(event) {
@@ -123,9 +123,8 @@ function displayFahrenheitTemperature(event) {
 }
 
 function displayCelciusTemperature(event) {
-  event.preventDefault();
-  celcius.classList.add("active");
   fahrenheit.classList.remove("active");
+  celcius.classList.add("active");
 
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
