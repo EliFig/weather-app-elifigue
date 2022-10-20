@@ -127,9 +127,40 @@ a {
 
 .source {
   font-size: 14px;
+  text-align: center;
 }
 @media (max-width: 576px){
   .weather-forecast{
     display: none;
   }
+  .container{
+    width: 92%;
+    padding: 50px 24px;
+  }
+h1{
+      font-size: 41px;
+}
+.center {
+  margin: 20px 0px;
+}
+.metric {
+  display: flex;
+font-size: 19px;
+margin-top: 69px;
+}
+.degree {
+  font-size: 57px;
+  
+  margin-top: 41px;
+  display: flex;
+}
+.details{
+  padding-top: 59px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 13px;
+}
+.source{
+  text-align: center;
+}
 }
