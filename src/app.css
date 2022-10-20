@@ -179,4 +179,7 @@ input{
 form .row{
   margin-left: 0px;
 }
+.col-12{
+  font-size: 28px;
+}
 }
